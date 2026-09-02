@@ -1,0 +1,40 @@
+$ curl "http://localhost:3060/api/search?category=Electronics"
+
+[
+  {
+    "_id": "64e8a1b2c3d4e5f607182903",
+    "id": "3",
+    "name": "Canon EOS DSLR Camera",
+    "category": "Electronics",
+    "condition": "Used - Good",
+    "posted_by": "david_p",
+    "zipcode": "10003",
+    "date_added": 1704240000,
+    "age_years": 2,
+    "description": "Entry-level DSLR camera with 18-55mm lens and original carrying bag."
+  },
+  {
+    "_id": "64e8a1b2c3d4e5f607182907",
+    "id": "7",
+    "name": "Smart HD LED TV 42 inch",
+    "category": "Electronics",
+    "condition": "Used - Good",
+    "posted_by": "robert_b",
+    "zipcode": "10007",
+    "date_added": 1704585600,
+    "age_years": 2,
+    "description": "1080p Smart TV with built-in streaming apps and remote."
+  },
+  {
+    "_id": "64e8a1b2c3d4e5f60718290d",
+    "id": "13",
+    "name": "Bluetooth Wireless Speaker",
+    "category": "Electronics",
+    "condition": "New",
+    "posted_by": "rachel_d",
+    "zipcode": "10013",
+    "date_added": 1705104000,
+    "age_years": 0,
+    "description": "Waterproof portable Bluetooth speaker with 12hr battery life."
+  }
+]

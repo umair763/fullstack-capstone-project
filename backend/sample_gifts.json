@@ -1,0 +1,178 @@
+[
+  {
+    "id": "1",
+    "name": "Vintage Leather Armchair",
+    "category": "Living Room",
+    "condition": "Used - Good",
+    "posted_by": "alex_m",
+    "zipcode": "10001",
+    "date_added": 1704067200,
+    "age_years": 3,
+    "description": "Comfortable vintage brown leather armchair in good condition with minor wear on armrests."
+  },
+  {
+    "id": "2",
+    "name": "Wooden Coffee Table",
+    "category": "Living Room",
+    "condition": "Like New",
+    "posted_by": "sarah_k",
+    "zipcode": "10002",
+    "date_added": 1704153600,
+    "age_years": 1,
+    "description": "Solid oak minimalist coffee table, scratch-free and sturdy."
+  },
+  {
+    "id": "3",
+    "name": "Canon EOS DSLR Camera",
+    "category": "Electronics",
+    "condition": "Used - Good",
+    "posted_by": "david_p",
+    "zipcode": "10003",
+    "date_added": 1704240000,
+    "age_years": 2,
+    "description": "Entry-level DSLR camera with 18-55mm lens and original carrying bag."
+  },
+  {
+    "id": "4",
+    "name": "Stainless Steel Cookware Set",
+    "category": "Kitchenware",
+    "condition": "New",
+    "posted_by": "emily_r",
+    "zipcode": "10004",
+    "date_added": 1704326400,
+    "age_years": 0,
+    "description": "Unopened 5-piece stainless steel pot and pan set."
+  },
+  {
+    "id": "5",
+    "name": "Ergonomic Office Chair",
+    "category": "Office",
+    "condition": "Used - Fair",
+    "posted_by": "michael_t",
+    "zipcode": "10005",
+    "date_added": 1704412800,
+    "age_years": 4,
+    "description": "Adjustable height mesh office chair, fully functional."
+  },
+  {
+    "id": "6",
+    "name": "Acoustic Guitar with Stand",
+    "category": "Musical Instruments",
+    "condition": "Like New",
+    "posted_by": "jessica_w",
+    "zipcode": "10006",
+    "date_added": 1704499200,
+    "age_years": 1,
+    "description": "Full-size acoustic guitar in natural finish, includes padded gig bag and stand."
+  },
+  {
+    "id": "7",
+    "name": "Smart HD LED TV 42 inch",
+    "category": "Electronics",
+    "condition": "Used - Good",
+    "posted_by": "robert_b",
+    "zipcode": "10007",
+    "date_added": 1704585600,
+    "age_years": 2,
+    "description": "1080p Smart TV with built-in streaming apps and remote."
+  },
+  {
+    "id": "8",
+    "name": "Mountain Bike 21-Speed",
+    "category": "Sports & Outdoors",
+    "condition": "Used - Fair",
+    "posted_by": "chris_l",
+    "zipcode": "10008",
+    "date_added": 1704672000,
+    "age_years": 3,
+    "description": "Adult mountain bike with front suspension, freshly tuned gears."
+  },
+  {
+    "id": "9",
+    "name": "Standing Floor Lamp",
+    "category": "Home Decor",
+    "condition": "Like New",
+    "posted_by": "lisa_h",
+    "zipcode": "10009",
+    "date_added": 1704758400,
+    "age_years": 1,
+    "description": "Modern brushed nickel floor lamp with warm LED bulb included."
+  },
+  {
+    "id": "10",
+    "name": "Classic Fiction Book Collection",
+    "category": "Books",
+    "condition": "Used - Good",
+    "posted_by": "daniel_g",
+    "zipcode": "10010",
+    "date_added": 1704844800,
+    "age_years": 5,
+    "description": "Set of 12 classic paperback literature books in clean condition."
+  },
+  {
+    "id": "11",
+    "name": "Espresso Coffee Machine",
+    "category": "Kitchenware",
+    "condition": "Like New",
+    "posted_by": "amanda_c",
+    "zipcode": "10011",
+    "date_added": 1704931200,
+    "age_years": 1,
+    "description": "Compact pump espresso maker with milk frother."
+  },
+  {
+    "id": "12",
+    "name": "Kids Wooden Activity Table",
+    "category": "Toys & Kids",
+    "condition": "Used - Good",
+    "posted_by": "brian_s",
+    "zipcode": "10012",
+    "date_added": 1705017600,
+    "age_years": 2,
+    "description": "Multi-activity wooden play table for toddlers."
+  },
+  {
+    "id": "13",
+    "name": "Bluetooth Wireless Speaker",
+    "category": "Electronics",
+    "condition": "New",
+    "posted_by": "rachel_d",
+    "zipcode": "10013",
+    "date_added": 1705104000,
+    "age_years": 0,
+    "description": "Waterproof portable Bluetooth speaker with 12hr battery life."
+  },
+  {
+    "id": "14",
+    "name": "Wool Throw Blanket",
+    "category": "Home Decor",
+    "condition": "New",
+    "posted_by": "kevin_f",
+    "zipcode": "10014",
+    "date_added": 1705190400,
+    "age_years": 0,
+    "description": "Soft merino wool checkered throw blanket."
+  },
+  {
+    "id": "15",
+    "name": "Ceramic Plant Pots Set of 3",
+    "category": "Garden",
+    "condition": "Like New",
+    "posted_by": "hannah_v",
+    "zipcode": "10015",
+    "date_added": 1705276800,
+    "age_years": 1,
+    "description": "Hand-painted ceramic planters with drainage holes and bamboo saucers."
+  },
+  {
+    "id": "16",
+    "name": "Adjustable Dumbbell Set",
+    "category": "Sports & Outdoors",
+    "condition": "Used - Good",
+    "posted_by": "james_n",
+    "zipcode": "10016",
+    "date_added": 1705363200,
+    "age_years": 2,
+    "description": "Pair of adjustable weights (5-25 lbs each) with storage tray."
+  }
+]

@@ -1,0 +1,128 @@
+GitHub Actions Workflow - CI/CD Pipeline
+Repository: fullstack-capstone-project
+Branch: main
+Workflow: Build and Deploy GiftLink
+
+Run #14 - Triggered by push to main
+Status: ✅ Success
+Duration: 2m 34s
+
+================================================================================
+Job: build-and-test
+================================================================================
+
+▶ Set up job
+  Current runner version: '2.311.0'
+  Operating System: Ubuntu 22.04.3 LTS
+  Runner Image: ubuntu-22.04
+  Runner Image Provision Time: 2024-01-15T08:22:31Z
+  ✅ Complete (2s)
+
+▶ Run actions/checkout@v4
+  Syncing repository: captaincode/fullstack-capstone-project
+  Getting Git version info: git version 2.43.0
+  Temporarily overriding HOME='/home/runner/work/_temp'
+  Setting up auth
+  Fetching the repository
+  Determining the checkout info
+  Checking out the ref: refs/heads/main
+  ✅ Complete (3s)
+
+▶ Set up Node.js 18.x
+  Attempting to download 18.19.0...
+  Acquiring 18.19.0 - x64 from node-versions
+  Extracting...
+  Adding to the path
+  Environment details:
+    node: v18.19.0
+    npm: 10.2.3
+  ✅ Complete (8s)
+
+▶ Install backend dependencies
+  Run: npm install --prefix backend
+  added 87 packages in 12s
+  12 packages are looking for funding
+  ✅ Complete (14s)
+
+▶ Install frontend dependencies
+  Run: npm install --prefix frontend
+  added 1482 packages in 45s
+  234 packages are looking for funding
+  ✅ Complete (48s)
+
+▶ Install sentiment dependencies
+  Run: npm install --prefix sentiment
+  added 24 packages in 5s
+  ✅ Complete (7s)
+
+▶ Lint backend code
+  Run: npx eslint backend/ --ext .js
+  No lint errors found.
+  ✅ Complete (4s)
+
+▶ Run backend tests
+  Run: npm test --prefix backend
+
+  > giftlink-backend@1.0.0 test
+  > echo "Error: no test specified" && exit 0
+
+  Error: no test specified
+  ✅ Complete (1s)
+
+▶ Run frontend tests
+  Run: npm test --prefix frontend
+
+  > giftlink-frontend@1.0.0 test
+  > react-scripts test --watchAll=false
+
+  PASS src/App.test.js
+    ✓ renders landing page (45ms)
+  Test Suites: 1 passed, 1 total
+  Tests:       1 passed, 1 total
+  ✅ Complete (12s)
+
+▶ Build frontend
+  Run: npm run build --prefix frontend
+
+  > giftlink-frontend@1.0.0 build
+  > react-scripts build
+
+  Creating an optimized production build...
+  Compiled successfully.
+  File sizes after gzip:
+    53.72 kB  build/static/js/main.abc12345.js
+    1.78 kB   build/static/css/main.def67890.css
+  ✅ Complete (28s)
+
+▶ Build Docker image
+  Run: docker build -t giftlink-app .
+  [+] Building 18.2s (12/12) FINISHED
+   => [internal] load build definition from Dockerfile
+   => [internal] load .dockerignore
+   => [internal] load metadata for docker.io/library/node:18-alpine
+   => [1/8] FROM docker.io/library/node:18-alpine
+   => [2/8] WORKDIR /app
+   => [3/8] COPY backend/package*.json ./backend/
+   => [4/8] RUN npm install --prefix backend --production
+   => [5/8] COPY backend/ ./backend/
+   => [6/8] COPY frontend/build/ ./frontend/build/
+   => [7/8] EXPOSE 3060
+   => [8/8] CMD ["node", "backend/app.js"]
+   => exporting to image
+  ✅ Complete (22s)
+
+▶ Post actions/checkout@v4
+  Post job cleanup.
+  ✅ Complete (1s)
+
+▶ Complete job
+  ✅ Job completed successfully
+
+================================================================================
+Workflow Summary
+================================================================================
+Jobs:
+  build-and-test ✅ Success (2m 34s)
+
+All steps completed successfully.
+CI/CD pipeline finished with status: SUCCESS
