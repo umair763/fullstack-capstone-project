@@ -15,3 +15,4 @@ COPY frontend/build/ ./frontend/build/
 EXPOSE 3060
 
 CMD ["node", "backend/app.js"]
+

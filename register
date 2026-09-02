@@ -5,3 +5,4 @@ $ curl -X POST http://localhost:3060/api/auth/register -H "Content-Type: applica
   "authtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWQiOiI2NWU4YjFjM2Q0ZTVmNjA3MTgyOWExIiwiaWF0IjoxNzA5NzYzMjAwLCJleHAiOjE3MDk3NjY4MDB9.kP2mXr9Vz4yQs8xNwO3LfGhT5jKpAqBnYcDe7RvWxZo",
   "email": "john.doe@example.com"
 }
+

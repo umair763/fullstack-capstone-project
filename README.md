@@ -104,3 +104,4 @@ npm start --prefix frontend
 ## License
 
 This project is part of the IBM Full Stack Software Developer Professional Certificate capstone.
+

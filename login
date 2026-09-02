@@ -6,3 +6,4 @@ $ curl -X POST http://localhost:3060/api/auth/login -H "Content-Type: applicatio
   "email": "john.doe@example.com",
   "userName": "John Doe"
 }
+
