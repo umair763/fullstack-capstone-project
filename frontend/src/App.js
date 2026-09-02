@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './components/LandingPage/LandingPage';
-import RegisterPage from './components/RegisterPage/RegisterPage';
-import LoginPage from './components/LoginPage/LoginPage';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./components/LandingPage/LandingPage";
+import RegisterPage from "./components/RegisterPage/RegisterPage";
+import LoginPage from "./components/LoginPage/LoginPage";
 
 function App() {
   return (
@@ -17,4 +17,3 @@ function App() {
 }
 
 export default App;
-

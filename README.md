@@ -56,6 +56,7 @@ fullstack-capstone-project/
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - MongoDB 6.0+
 - Docker (optional)
@@ -63,12 +64,14 @@ fullstack-capstone-project/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/fullstack-capstone-project.git
 cd fullstack-capstone-project
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install --prefix backend
 npm install --prefix frontend
@@ -76,32 +79,34 @@ npm install --prefix sentiment
 ```
 
 3. Import sample data:
+
 ```bash
 node backend/import_gifts.js
 ```
 
 4. Start the backend server:
+
 ```bash
 npm start --prefix backend
 ```
 
 5. Start the frontend:
+
 ```bash
 npm start --prefix frontend
 ```
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/gifts` | List all gift items |
-| GET | `/api/gifts/:id` | Get item details |
-| GET | `/api/search?category=X` | Search items by category |
-| POST | `/api/auth/register` | Register a new user |
-| POST | `/api/auth/login` | Login user |
-| PUT | `/api/auth/update` | Update user profile |
+| Method | Endpoint                 | Description              |
+| ------ | ------------------------ | ------------------------ |
+| GET    | `/api/gifts`             | List all gift items      |
+| GET    | `/api/gifts/:id`         | Get item details         |
+| GET    | `/api/search?category=X` | Search items by category |
+| POST   | `/api/auth/register`     | Register a new user      |
+| POST   | `/api/auth/login`        | Login user               |
+| PUT    | `/api/auth/update`       | Update user profile      |
 
 ## License
 
 This project is part of the IBM Full Stack Software Developer Professional Certificate capstone.
-
