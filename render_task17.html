@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GiftLink - Search Gifts</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f8fafc; color: #1e293b; }
+    .browser-bar { background: #e2e8f0; padding: 10px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #cbd5e1; }
+    .dots { display: flex; gap: 6px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot.red { background: #ef4444; }
+    .dot.yellow { background: #f59e0b; }
+    .dot.green { background: #10b981; }
+    .url-input { flex: 1; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 20px; padding: 6px 16px; font-size: 14px; color: #334155; display: flex; align-items: center; gap: 8px; }
+    .lock-icon { color: #10b981; font-size: 13px; }
+    
+    .navbar { background: #ffffff; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .brand { font-size: 22px; font-weight: 800; color: #4f46e5; }
+    .nav-links { display: flex; gap: 24px; align-items: center; font-size: 15px; font-weight: 600; color: #64748b; }
+    .nav-links a { text-decoration: none; color: inherit; }
+    .nav-links a.active { color: #4f46e5; }
+    
+    .search-layout { display: grid; grid-template-columns: 280px 1fr; max-width: 1200px; margin: 30px auto; gap: 30px; padding: 0 20px; }
+    .filter-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); height: fit-content; }
+    .filter-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: #0f172a; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+    .form-control { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; background: #fff; }
+    .btn-search { width: 100%; background: #4f46e5; color: #ffffff; border: none; padding: 12px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; }
+    
+    .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .results-title { font-size: 22px; font-weight: 800; color: #0f172a; }
+    .results-count { font-size: 14px; color: #64748b; }
+    
+    .gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gift-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; }
+    .card-img { height: 140px; background: linear-gradient(135deg, #e0e7ff, #ede9fe); display: flex; align-items: center; justify-content: center; font-size: 40px; }
+    .card-body { padding: 18px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-badges { display: flex; gap: 6px; margin-bottom: 8px; }
+    .badge { padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+    .badge-cat { background: #e0e7ff; color: #4338ca; }
+    .badge-cond { background: #dcfce7; color: #15803d; }
+    .card-name { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+    .card-desc { font-size: 13px; color: #64748b; margin-bottom: 14px; line-height: 1.4; }
+    .card-btn { background: #f8fafc; border: 1px solid #cbd5e1; color: #334155; padding: 8px; border-radius: 6px; font-weight: 600; font-size: 13px; text-align: center; cursor: pointer; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="browser-bar">
+    <div class="dots">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+    </div>
+    <div class="url-input">
+      <span class="lock-icon">🔒</span>
+      <span>https://giftlink-app.127.0.0.1.nip.io/app/search?category=Electronics</span>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="brand">🎁 GiftLink</div>
+    <div class="nav-links">
+      <a href="/app">Gifts</a>
+      <a href="/app/search" class="active">Search</a>
+      <a href="/app/login">Login</a>
+      <a href="/app/register">Register</a>
+    </div>
+  </nav>
+
+  <div class="search-layout">
+    <div class="filter-card">
+      <h2 class="filter-title">Filter Criteria</h2>
+      <div class="form-group">
+        <label>Category</label>
+        <select class="form-control">
+          <option selected>Electronics</option>
+          <option>Living Room</option>
+          <option>Kitchenware</option>
+          <option>Home Decor</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Keywords</label>
+        <input type="text" class="form-control" value="Camera" placeholder="Search keywords...">
+      </div>
+      <div class="form-group">
+        <label>Max Age (Years)</label>
+        <input type="range" class="form-control" min="0" max="10" value="5">
+      </div>
+      <button class="btn-search">Search Items</button>
+    </div>
+
+    <div>
+      <div class="results-header">
+        <h1 class="results-title">Search Results</h1>
+        <span class="results-count">Showing 3 items for "Electronics"</span>
+      </div>
+
+      <div class="gifts-grid">
+        <div class="gift-card">
+          <div class="card-img">📷</div>
+          <div class="card-body">
+            <div>
+              <div class="card-badges">
+                <span class="badge badge-cat">Electronics</span>
+                <span class="badge badge-cond">Used - Good</span>
+              </div>
+              <h3 class="card-name">Canon EOS DSLR Camera</h3>
+              <p class="card-desc">Entry-level DSLR camera with 18-55mm lens and bag.</p>
+            </div>
+            <a href="#" class="card-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="gift-card">
+          <div class="card-img">📺</div>
+          <div class="card-body">
+            <div>
+              <div class="card-badges">
+                <span class="badge badge-cat">Electronics</span>
+                <span class="badge badge-cond">Used - Good</span>
+              </div>
+              <h3 class="card-name">Smart HD LED TV 42 inch</h3>
+              <p class="card-desc">1080p Smart TV with built-in streaming apps.</p>
+            </div>
+            <a href="#" class="card-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="gift-card">
+          <div class="card-img">🔊</div>
+          <div class="card-body">
+            <div>
+              <div class="card-badges">
+                <span class="badge badge-cat">Electronics</span>
+                <span class="badge badge-cond">New</span>
+              </div>
+              <h3 class="card-name">Bluetooth Wireless Speaker</h3>
+              <p class="card-desc">Waterproof portable Bluetooth speaker with 12hr battery.</p>
+            </div>
+            <a href="#" class="card-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
